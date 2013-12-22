@@ -1,0 +1,84 @@
+alias   x='ssh-agent startx'
+alias  ..="cd .."
+alias ...="cd ../.."
+alias  cl='clear'
+alias tmux="tmux -2"
+
+alias  ip='sudo ifconfig'
+alias   d="cd $HOME/Documents"
+alias  dl="cd $HOME/Downloads"
+alias  dt="cd $HOME/Desktop"
+alias   p="cd $HOME/Projects"
+alias  re="cd $HOME/Projects/Repos"
+alias   g="git"
+alias   h="history"
+alias   j="jobs"
+alias pod="perldoc"
+
+alias   v="vi"
+if test -x /usr/local/bin/vim -o -x /usr/bin/vim; then
+	alias v="vim"
+	export EDITOR="vim"
+fi
+
+#alias   s="subl ."
+alias   o="xdg-open"
+alias  oo="xdg-open ."
+
+alias  du='du -sh'
+alias  df='df -h'
+
+alias  ls='ls -F'
+if test $(uname -s) = "Linux"; then
+	alias ls='ls -F --color=auto'
+	alias grep='grep --color'
+fi
+if test -x /usr/local/bin/colorls ; then
+	alias ls='colorls -G -F'
+fi
+
+alias  ll='ls -la'
+alias   l='less'
+alias  gr='grep -R'
+alias  nn='netstat -na'
+alias  na='netstat -a'
+alias  nr='netstat -nar'
+alias  nt='nn -t'
+alias  nu='nn -u'
+
+if test $(uname -s) = "Linux"; then
+	alias pki='apt-cache show'
+	alias pka='sudo apt-get install'
+	alias pkd='sudo apt-get remove'
+	alias pks='apt-cache search'
+
+	alias pf='sudo iptables -v'
+fi
+
+if test $(uname -s) = "OpenBSD"; then
+	alias pki='pkg_info'
+	alias pka='sudo pkg_add'
+	alias pkd='sudo pkg_delete'
+
+	alias  pf='sudo pfctl -v'
+fi
+
+alias  gc='git clone'
+alias  gl='git log'
+alias  gb='git branch -a'
+alias gco='git checkout'
+
+alias svn='svn'
+
+if test $(uname -s) = "Linux"; then
+	alias chrome='chromium-browser'
+fi
+
+if test -x $HOME/Projects/Repos/git.qemu.org/qemu/x86_64-softmmu/qemu-system-x86_64;
+then
+	alias my-qemu-system-x86_64="$HOME/Projects/Repos/git.qemu.org/qemu/x86_64-softmmu/qemu-system-x86_64 -enable-kvm -m 1024"
+fi
+
+if test -x `which plackup`; then
+	alias httpd="plackup -MPlack::App::Directory -e 'Plack::App::Directory->new->to_app'"
+fi

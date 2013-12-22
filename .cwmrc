@@ -1,0 +1,32 @@
+sticky yes
+
+borderwidth 1
+
+color activeborder rgb:90/90/90
+color inactiveborder rgb:40/40/40
+
+snapdist	10
+
+bind M-1        grouponly1
+bind M-2        grouponly2
+bind M-3        grouponly3
+bind M-4        grouponly4
+
+bind MS-1       movetogroup1
+bind MS-2       movetogroup2
+bind MS-3       movetogroup3
+bind MS-4       movetogroup3
+
+bind CM-Return	uxterm
+bind CM-b	firefox
+bind CMS-b	chrome
+bind CMS-x	xombrero
+bind CMS-p	xpdf
+bind CMS-g	gimp
+bind CMS-N	opennx
+
+bind CMS-t	"xterm -e \"top -C -s 1\""
+bind CMS-s	"xterm -e \"sudo systat -s 1\""
+
+bind CM4S-d	"xbacklight -dec 20"
+bind CM4S-l	"xbacklight -inc 20"

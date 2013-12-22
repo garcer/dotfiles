@@ -1,0 +1,15 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+XTerm*FaceName: Droid Sans Mono
+XTerm*FaceSize: 10
+XTerm*background: #101010
+XTerm*foreground: #999999
+
+UXTerm*FaceName: Droid Sans Mono
+UXTerm*FaceSize: 10
+UXTerm*background: #101010
+UXTerm*foreground: #999999
