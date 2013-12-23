@@ -2,6 +2,8 @@ export PATH="$PATH:$HOME/bin"
 export VISUAL=vi
 export EDITOR=vi
 
+set -o vi
+
 if test -e $HOME/.aliases; then
 	. $HOME/.aliases;
 fi
