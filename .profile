@@ -11,3 +11,7 @@ fi
 if test -e $HOME/perl5/perlbrew/etc/bashrc; then
 	. $HOME/perl5/perlbrew/etc/bashrc
 fi
+
+if test -e /etc/bash_completion; then
+	. /etc/bash_completion
+fi
