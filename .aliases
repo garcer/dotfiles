@@ -79,6 +79,6 @@ then
 	alias my-qemu-system-x86_64="$HOME/Projects/Repos/git.qemu.org/qemu/x86_64-softmmu/qemu-system-x86_64 -enable-kvm -m 1024"
 fi
 
-if test -x `which plackup`; then
+if test `whereis plackup`; then
 	alias httpd="plackup -MPlack::App::Directory -e 'Plack::App::Directory->new->to_app'"
 fi
