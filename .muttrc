@@ -1,11 +1,8 @@
 set realname = 'Cesare Gargano'
-set my_server='mail.pgamma.com'
-set my_user="$MAIL_USER"
-set my_pw="$MAIL_PWD"
-set from = "$my_user"
-set spoolfile="imaps://$my_user:$my_pw@$my_server/INBOX"
-set folder="imaps://$my_user:$my_pw@$my_server/INBOX"
-set smtp_url="smtps://$my_user:$my_pw@$my_server"
+set from = "$MAIL_USER"
+set spoolfile="imaps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER/INBOX"
+set folder="imaps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER/INBOX"
+set smtp_url="smtps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER"
 set record="=Sent"
 set postponed="=Drafts"
 set trash="=Trash"
@@ -15,6 +12,7 @@ unset imap_passive
 set imap_check_subscribed
 set mail_check=1
 set timeout=1
-set header_cache="~/.mutt/.hcache.$my_user.$my_server"
 set net_inc=1
 set use_from=yes
+set message_cachedir=~/.mutt/cache/
+set header_cache="~/.mutt/.hcache/$MAIL_USER.$MAIL_SERVER"
