@@ -60,7 +60,7 @@ if test $(uname -s) = "OpenBSD"; then
 	alias pka='sudo pkg_add'
 	alias pkd='sudo pkg_delete'
 
-	alias  pf='sudo pfctl -v'
+	alias  pf='sudo pfctl'
 fi
 
 alias  gc='git clone'
