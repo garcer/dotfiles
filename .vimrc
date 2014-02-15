@@ -5,7 +5,7 @@ set ruler
 set showcmd
 set incsearch
 set hlsearch
-set background=dark
+set background=light
 set textwidth=78
 
 syntax on
