@@ -82,3 +82,5 @@ fi
 if test `whereis plackup`; then
 	alias httpd="plackup -MPlack::App::Directory -e 'Plack::App::Directory->new->to_app'"
 fi
+
+alias ajax='curl -H "X-Requested-With: XMLHttpRequest"'
