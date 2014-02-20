@@ -1,4 +1,5 @@
 sticky yes
+fontname "-misc-droid sans mono-medium-r-normal--*-*-*-*-*-*-*-*"
 
 borderwidth 1
 
@@ -24,8 +25,9 @@ bind CMS-x	xombrero
 bind CMS-p	xpdf
 bind CMS-g	gimp
 bind CMS-N	opennx
+bind CMS-c	xcalc
 
-bind CMS-t	"xterm -e \"top -C -s 1\""
+bind CMS-t	"xterm -e \"top -s 1\""
 bind CMS-s	"xterm -e \"sudo systat -s 1\""
 
 bind CM4S-d	"xbacklight -dec 20"
