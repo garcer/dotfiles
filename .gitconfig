@@ -32,6 +32,8 @@
   wdiff = diff --color-words
   wshow = show --color-words
 
+  po = push origin master
+
 [color]
   pager = true
   ui = auto
