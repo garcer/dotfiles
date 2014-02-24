@@ -33,6 +33,7 @@ if has("autocmd")
   au BufRead,BufNewFile *.py      setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list
   au BufRead,BufNewFile *.html    setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list
   au BufRead,BufNewFile *.tt      setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list ft=html
+  au BufRead,BufNewFile *.ep      setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list ft=html
   au BufRead,BufNewFile *.css     setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list
   au BufRead,BufNewFile *.js      setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 list
 

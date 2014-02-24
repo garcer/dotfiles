@@ -59,6 +59,7 @@ if test $(uname -s) = "OpenBSD"; then
 	alias pki='pkg_info'
 	alias pka='sudo pkg_add'
 	alias pkd='sudo pkg_delete'
+	alias pks=""
 
 	alias  pf='sudo pfctl'
 fi

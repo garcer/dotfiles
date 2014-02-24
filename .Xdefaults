@@ -55,7 +55,9 @@ Xft.hintstyle:            hintslight
 *FaceSize:                10
 *scrollBar:               none
 
-!*background:              #101010
-!*foreground:              #999999
+*background:              #101010
+*foreground:              #999999
 
 *loginShell:              true
+
+*text.scrollVertical:     never
