@@ -39,7 +39,7 @@ fi
 
 alias  ll='ls -la'
 alias   l='less'
-alias  gr='grep -R'
+alias  gr='grep -Rni'
 alias  nn='netstat -na'
 alias  na='netstat -a'
 alias  nr='netstat -nar'
