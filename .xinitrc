@@ -4,10 +4,10 @@ xset dpms 0 0 610
 xset b off
 xset r rate 130 200
 xset s blank
-xidle -timeout 600 &
+xidle -timeout 600 -program "/usr/X11R6/bin/xlock -fg black -icongeometry 0x0" &
 xbacklight -set 50
 
-for d in /usr/local/lib/X11/fonts/* /usr/local/share/ghostscript/fonts; do
+for d in /usr/local/share/fonts/* /usr/local/share/fonts/powerline/*; do
 	if [ -d $d ]; then
 		 xset fp+ $d
 	fi
