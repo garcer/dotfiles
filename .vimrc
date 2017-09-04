@@ -1,11 +1,15 @@
-set nocompatible
+set background=light
 set backspace=indent,eol,start
 set history=5000
+set hlsearch
+set ignorecase
+set incsearch
+set pastetoggle=<C-p>
 set ruler
 set showcmd
-set incsearch
-set hlsearch
-set background=light
+set showmatch
+set smartcase
+set t_Co=256
 set textwidth=78
 
 syntax on
@@ -68,8 +72,6 @@ imap <F11> <nop>
 set pastetoggle=<F11>
 
 nmap <silent> ,/ :nohlsearch<CR>
-
-" Wed Oct 24 01:15:57 PDT 2012
 nmap <leader>L :set list!<CR>
 nmap <leader>N :set number!<CR>
 nmap <leader>M :match rightMargin /.\%>79v/<CR>

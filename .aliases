@@ -4,7 +4,6 @@ alias ...="cd ../.."
 alias  cl='clear'
 alias tmux="tmux -2"
 
-alias  ip='sudo ifconfig'
 alias   d="cd $HOME/Documents"
 alias  dl="cd $HOME/Downloads"
 alias  dt="cd $HOME/Desktop"
@@ -21,7 +20,6 @@ if test -x /usr/local/bin/vim -o -x /usr/bin/vim; then
 	export EDITOR="vim"
 fi
 
-#alias   s="subl ."
 alias   o="xdg-open"
 alias  oo="xdg-open ."
 
@@ -57,11 +55,11 @@ fi
 
 if test $(uname -s) = "OpenBSD"; then
 	alias pki='pkg_info'
-	alias pka='sudo pkg_add'
-	alias pkd='sudo pkg_delete'
+	alias pka='doas pkg_add'
+	alias pkd='doas pkg_delete'
 	alias pks=""
 
-	alias  pf='sudo pfctl'
+	alias  pf='doas pfctl'
 fi
 
 alias  gc='git clone'

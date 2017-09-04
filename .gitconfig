@@ -10,49 +10,6 @@
   pager  = less
   whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
 
-[apply]
-  #whitespace = nowarn
-  #whitespace = strip
-  #whitespace = fix
-
-[alias]
-  ci = commit -a
-  civ = commit -av
-  cv = commit -v
-  co = checkout
-  st = status
-  df = diff
-  serve = daemon --reuseaddr --verbose  --base-path=. --export-all --enable=receive-pack
-  servegit = daemon --reuseaddr --verbose  --base-path=. --export-all --enable=receive-pack ./.git
-  last  = cat-file commit HEAD
-  ls    = ls-files --exclude-per-directory=.gitignore \
-          --exclude-from=.git/info/exclude \
-          -t -o -u -s -m -d
-  unstage = reset HEAD --
-  wdiff = diff --color-words
-  wshow = show --color-words
-
-  po = push origin master
-
-[color]
-  pager = true
-  ui = auto
-  branch = auto
-  diff = auto
-  status = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
 [credential]
 	helper = cache --timeout=3600
 [github]

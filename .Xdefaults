@@ -61,3 +61,19 @@ Xft.hintstyle:            hintslight
 *loginShell:              true
 
 *text.scrollVertical:     never
+
+*.XTerm.*.selectToClipboard:    true
+*.XTerm.*.pointerMode:    2
+
+! make alt+v/command+v paste clipboard
+*.XTerm.*.VT100.translations:   #override\
+    Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)\n\
+    Super <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
+
+! make xaw scrollbars act like normal ones
+.XTerm.*.Scrollbar.translations: #override\
+    <Btn1Down>: StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
+    <Btn2Down>: StartScroll(Forward) \n\
+    <Btn3Down>: StartScroll(Backward) \n\
+    <Btn1Motion>: MoveThumb() NotifyThumb() \n\
+    <BtnUp>: NotifyScroll(Proportional) EndScroll()
