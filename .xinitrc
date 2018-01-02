@@ -4,7 +4,7 @@ xset dpms 0 0 610
 xset b off
 xset r rate 130 200
 xset s blank
-xset m 10 1/3
+xset m 1 1/2
 xidle -timeout 600 -program "/usr/X11R6/bin/xlock -fg black -icongeometry 0x0" &
 xbacklight -set 70
 
@@ -30,8 +30,8 @@ if [ -r $HOME/.Xdefaults ]; then
 	xrdb -merge $HOME/.Xdefaults
 fi
 
-if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
-	eval `dbus-launch --sh-syntax --exit-with-session`
-fi
+#if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
+#	eval `dbus-launch --sh-syntax --exit-with-session`
+#fi
 
 cwm
