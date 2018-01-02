@@ -2,6 +2,7 @@ set realname = 'Cesare Gargano'
 set from = "$MAIL_USER"
 set spoolfile="imaps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER/"
 set folder="imaps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER/"
+set certificate_file=~/.mutt/certificates/
 set smtp_url="smtps://$MAIL_USER:$MAIL_PWD@$MAIL_SERVER"
 set record="=Sent"
 set postponed="=Drafts"
