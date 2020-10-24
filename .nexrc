@@ -1,5 +1,9 @@
-set autoindent
-set ruler
-set searchincr
-set showmatch
 set showmode
+set showmatch
+set ruler
+set verbose
+set leftright
+set extended
+set iclower
+set searchincr
+set report=1
