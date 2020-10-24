@@ -92,4 +92,4 @@ command xcalc  xcalc
 # ignore these windows when tiling/cycling
 ignore xclock
 
-bind-key 4S-Print "/home/garcer/.local/bin/screenshots"
+bind-key 4S-Print ".local/bin/screenshots"
