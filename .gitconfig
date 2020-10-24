@@ -2,15 +2,13 @@
   name = Cesare Gargano
   email = gar@plusiagamma.com
 
-[merge]
-  tool = vimdiff
+[color]        
+  ui = false
+  branch = false
+  diff = false
+  interactive = false
+  status = false
+  log = false
 
-[core]
-  editor = vim
-  pager  = less
-  whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
-
-[credential]
-	helper = cache --timeout=3600
 [github]
-	user = garcer
+  user = garcer

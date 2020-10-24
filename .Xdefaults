@@ -1,79 +1,101 @@
-! Solarized color scheme for the X Window System
-! http://ethanschoonover.com/solarized
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define S_yellow          #b58900
-#define S_orange          #cb4b16
-#define S_red             #dc322f
-#define S_magenta         #d33682
-#define S_violet          #6c71c4
-#define S_blue            #268bd2
-#define S_cyan            #2aa198
-#define S_green           #859900
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
 
-#define S_base03          #002b36
-#define S_base02          #073642
-#define S_base01          #586e75
-#define S_base00          #657b83
-#define S_base0           #839496
-#define S_base1           #93a1a1
-#define S_base2           #eee8d5
-#define S_base3           #fdf6e3
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base05
 
-!*background:              S_base03
-!*foreground:              S_base0
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
 
-Xft.dpi:                  96
-Xft.antialias:            true
-Xft.rgba:                 rgb
-Xft.hinting:              true
-Xft.hintstyle:            hintslight
+*.internalBorder:	10	
+*.saveLines:			100000
+*.scrollBar:			false
+*.selectToClipboard:		true
+*.termName:			xterm-256color
+*.utmpInhibit:			true
 
-*FaceName:                Droid Sans Mono
-*FaceSize:                10
-*scrollBar:               none
+XTerm.pointerMode:	10	
+XTerm.visualBell:		false
 
-*background:              #101010
-*foreground:              #999999
+*VT100.utf8Fonts.font4:	-misc-fixed-medium-r-normal--13-120-75-75-c-80-iso10646-1
+*VT100.utf8Fonts.font2:	-misc-fixed-medium-r-normal--8-80-75-75-c-50-iso10646-1
+*VT100.utf8Fonts.font6:	-misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1
+*VT100.utf8Fonts.font5:	-misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+*VT100.utf8Fonts.font3:	-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
+*VT100.utf8Fonts.font:	-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 
-*loginShell:              true
+! make alt+v paste clipboard
+XTerm.vt100.translations:	#override\
+    Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
 
-*text.scrollVertical:     never
+SshAskpass*inputTimeout:	15
 
-*.XTerm.*.selectToClipboard:    true
-*.XTerm.*.pointerMode:    2
+XTerm*allowBoldFonts         : false
+!XTerm*scrollKey              : true
+!XTerm*fullscreen             : never
+XTerm*cutToBeginningOfLine   : false
+XTerm*cutNewline             : false
+XTerm*charClass              : 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on2Clicks              : word
+XTerm*on3Clicks              : line
 
-! make alt+v/command+v paste clipboard
-*.XTerm.*.VT100.translations:   #override\
-    Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)\n\
-    Super <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
+!XIdle*position : sw
+XIdle*delay    : 1
+XIdle*timeout  : 300
 
-! make xaw scrollbars act like normal ones
-.XTerm.*.Scrollbar.translations: #override\
-    <Btn1Down>: StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
-    <Btn2Down>: StartScroll(Forward) \n\
-    <Btn3Down>: StartScroll(Backward) \n\
-    <Btn1Motion>: MoveThumb() NotifyThumb() \n\
-    <BtnUp>: NotifyScroll(Proportional) EndScroll()
+XLock.dpmsoff     : 1
+XLock.description : off
+XLock.echokeys    : off
+XLock.info        :
+XLock.background  : black
+XLock.foreground  : black
+XLock.mode        : blank
+XLock.icongeometry: 0x0
+
+note*VT100.utf8Fonts.font: -misc-fixed-medium-r-semicondensed--20-200-75-75-c-100-iso10646-1
